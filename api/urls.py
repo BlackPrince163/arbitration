@@ -21,11 +21,11 @@ from rest_framework import routers, permissions
 
 from api.views import ProductListView
 
-router = routers.DefaultRouter()
-# router.register(r'products', ProductViewSet, basename='product')
+router = routers.SimpleRouter()
+router.register(r'products', ProductListView, basename='product')
 
 urlpatterns = [
-    path("products/", ProductListView.as_view()),
+    # path("products/", ProductListView.as_view()),
     path("", include(router.urls)),
 ]
 
