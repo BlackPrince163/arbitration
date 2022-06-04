@@ -4,7 +4,7 @@ from api.models import Product
 
 
 def run():
-    _PATH = r"D:\PythonProject\arbitration\products.xlsx"
+    _PATH = r".\products.xlsx"
     products = openpyxl.open(_PATH, read_only=True)
     sheet = products.active
     product_list = []
